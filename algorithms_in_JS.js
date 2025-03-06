@@ -14,3 +14,28 @@ function findLargestNumber(array){
     // Return the largest number found
     return max;
 }
+
+// Example usage
+const arr = [3, 1, 4, 1, 5, 9, 2, 6, 5];
+console.log(findLargestNumber(arr)); // Output: 9
+
+
+// Function to reverse an array
+
+function reverseArray(array){
+    // Create a new Array to hold the reversed elements
+    let reverseArray = [];
+
+    // Iterate through the original array
+    for(let i = array.length - 1; i >=0; i--){
+        // Add each element to the new array
+        reverseArray.push(array[i]);
+    }
+
+    // Return reversed array
+    return reverseArray;
+}
+
+// Example usage
+const arr1 = [1, 2, 3, 4, 5];
+console.log(reverseArray(arr)); // output: [5, 4, 3, 2, 1]
