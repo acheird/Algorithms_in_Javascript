@@ -21,7 +21,6 @@ console.log(findLargestNumber(arr)); // Output: 9
 
 
 // Function to reverse an array
-
 function reverseArray(array){
     // Create a new Array to hold the reversed elements
     let reverseArray = [];
@@ -38,7 +37,7 @@ function reverseArray(array){
 
 // Example usage
 const arr1 = [1, 2, 3, 4, 5];
-console.log(reverseArray(arr)); // output: [5, 4, 3, 2, 1]
+console.log(reverseArray(arr1)); // output: [5, 4, 3, 2, 1]
 
 
 // Function to check if a string is a palindrome
@@ -85,3 +84,43 @@ function mostFrequentElement(array){
 
 // Example usage
 console.log(mostFrequentElement([1, 3, 2, 1, 4, 1, 2, 2, 3]));
+
+
+
+// Function to merge two sorted arrays into a single sorted array
+
+function mergeSortedArrays(arr1, arr2){
+    // Initialize an empty array to hold the merged result
+    const mergedArray = [];
+
+    // Initialize two pointers, one for each array
+    let i = 0;
+    let j = 0;
+
+    // Iterate through both arrays
+    while(i < arr1.length && j < arr2.length){
+        if(arr1[i] < arr2[j]){
+            // If the element from arr1 is smaller, add it to the merged array and move pointer
+            mergedArray.push(arr1);
+            i++;
+        }else{
+            // If the element from arr2 is smaller, add it to the merged array and move the pointer in arr2
+            mergedArray.push(arr2[j]);
+            j++;
+        }
+    }
+
+    // If there are remaining elements in arr1, add them to the merged array
+    while (i < arr1.length) {
+        mergedArray.push(arr1[i]);
+        i++;
+    }
+
+    // If there are remaining elements in arr2, add them to merged array
+    while(j < arr2.length){
+        mergedArray.push(arr2[j]);
+        j++;
+    }
+    // Return the merged sorted array
+    return mergedArray;
+}
