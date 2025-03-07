@@ -39,3 +39,49 @@ function reverseArray(array){
 // Example usage
 const arr1 = [1, 2, 3, 4, 5];
 console.log(reverseArray(arr)); // output: [5, 4, 3, 2, 1]
+
+
+// Function to check if a string is a palindrome
+
+function isPalindrome(string){
+    // Reverse original string
+    const reversedString = string.split('').reverse().join('');
+
+    // Compare original with reversed
+    return string === reversedString;
+}
+
+console.log(isPalindrome("level")); // Output: true
+console.log(isPalindrome("hello")); // Output: false
+
+
+// Function to find most frequent element in an array
+
+function mostFrequentElement(array){
+    // Create an object to count occurences of each element
+    const frequencyMap = {};
+
+    // Populate frequency map
+    for(let num of array){
+        if(frequencyMap[num]){
+            frequencyMap[num]++;
+        }else{
+            frequencyMap[num] = 1;
+        }
+    }
+
+    // Find the element with the highest frequency
+    let maxFrequency = 0;
+    let mostFrequentElement = array[0];
+
+    for(let num in frequencyMap){
+        if(frequencyMap[num] > maxFrequency){
+            maxFrequency = frequencyMap[num];
+            mostFrequent = parseInt(num);
+        }
+    }
+    return mostFrequent;
+}
+
+// Example usage
+console.log(mostFrequentElement([1, 3, 2, 1, 4, 1, 2, 2, 3]));
