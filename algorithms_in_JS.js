@@ -1,4 +1,4 @@
-// Function to find the largest number in an array
+// 1.Function to find the largest number in an array
 
 function findLargestNumber(array){
     // Initialize the max variable with the first element of the array
@@ -17,10 +17,11 @@ function findLargestNumber(array){
 
 // Example usage
 const arr = [3, 1, 4, 1, 5, 9, 2, 6, 5];
-console.log(findLargestNumber(arr)); // Output: 9
+console.log("1. The largest number in the array is: " + findLargestNumber(arr)); // Output: 9
 
 
 // Function to reverse an array
+
 function reverseArray(array){
     // Create a new Array to hold the reversed elements
     let reverseArray = [];
@@ -37,7 +38,7 @@ function reverseArray(array){
 
 // Example usage
 const arr1 = [1, 2, 3, 4, 5];
-console.log(reverseArray(arr1)); // output: [5, 4, 3, 2, 1]
+console.log("2. Reversed Array: " + reverseArray(arr1)); // output: [5, 4, 3, 2, 1]
 
 
 // Function to check if a string is a palindrome
@@ -50,8 +51,9 @@ function isPalindrome(string){
     return string === reversedString;
 }
 
-console.log(isPalindrome("level")); // Output: true
-console.log(isPalindrome("hello")); // Output: false
+
+console.log("3. Is the string palindrome " + isPalindrome("level")); // Output: true
+console.log("3. Is the string palindrome " + isPalindrome("hello")); // Output: false
 
 
 // Function to find most frequent element in an array
@@ -83,7 +85,7 @@ function mostFrequentElement(array){
 }
 
 // Example usage
-console.log(mostFrequentElement([1, 3, 2, 1, 4, 1, 2, 2, 3]));
+console.log("4. The most frequent element is " + mostFrequentElement([1, 3, 2, 1, 4, 1, 2, 2, 3]));
 
 
 
@@ -101,7 +103,7 @@ function mergeSortedArrays(arr1, arr2){
     while(i < arr1.length && j < arr2.length){
         if(arr1[i] < arr2[j]){
             // If the element from arr1 is smaller, add it to the merged array and move pointer
-            mergedArray.push(arr1);
+            mergedArray.push(arr1[i]);
             i++;
         }else{
             // If the element from arr2 is smaller, add it to the merged array and move the pointer in arr2
@@ -124,3 +126,49 @@ function mergeSortedArrays(arr1, arr2){
     // Return the merged sorted array
     return mergedArray;
 }
+
+// Example usage
+console.log("5a. The merged and sorted array is " + mergeSortedArrays([1, 3, 5], [2, 4, 6])); 
+// Output: [1, 2, 3, 4, 5, 6]
+
+
+// Function to merge two sorted arrays into a single sorted array
+function mergeSortedArraysb(arr1, arr2){
+    // Concatenate two arrays
+    const combinedArray = arr1.concat(arr2);
+
+    // Sort combined array
+    combinedArray.sort((a, b) => a - b);
+
+    // Return sorted, merged array
+    return combinedArray;
+}
+
+// Example usage
+console.log("5b. The merged and sorted array is " + mergeSortedArraysb([1, 3, 5], [2, 4, 6])); 
+// Output: [1, 2, 3, 4, 5, 6]
+
+
+
+// Function to compare neighbors in an array
+function compareNeighbors(arr){
+    let result = "";
+
+    for(let i=0; i< arr.length - 1; i++){
+		if(arr[i] < arr[i+1]){
+			result += "<";
+		}else if(arr[i] > arr[i+1]){
+			result += ">";
+		}else{
+			result += "=";
+		}
+ 	}
+    return result;
+}
+
+// Example usage
+console.log("The result of compared neighbors " + compareNeighbors([1, 3, 2, 1, 4, 1, 2, 2, 3])); 
+// Output: [1, 2, 3, 4, 5, 6]
+
+
+// new function
