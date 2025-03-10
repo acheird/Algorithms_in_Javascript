@@ -241,6 +241,28 @@ function usernameValidation(str){
     return valid_username;
     }
 
-    // Example usage
-    const str = "Ab23_f";
-    console.log("11. Username is valid " + usernameValidation(str));
+// Example usage
+const str = "Ab23_f";
+console.log("11. Username is valid " + usernameValidation(str));
+
+
+
+//12. Find strings with letter in the same index
+function sameIndex(array){
+    for(let i = 0; i< array.length; i++){
+        for(let j = i + 1; j < array.length; j++){
+            for(let k = 0; k < Math.min(array[i].length, array[j].length); k++){
+                if (array[i][k] === array[j][k]) {
+                return[k, i, j, array[i][k]];
+            }
+        }
+    }     
+}
+return [];
+}
+
+// Example usage
+const S = ["abc", "bca", "dbe"];
+const match = sameIndex(S);
+console.log("12. Positions of the common letter are " + sameIndex(S));
+
