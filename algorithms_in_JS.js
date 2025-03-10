@@ -243,7 +243,7 @@ function usernameValidation(str){
 
 // Example usage
 const str = "Ab23_f";
-console.log("11. Username is valid " + usernameValidation(str));
+console.log("11. Username is valid: " + usernameValidation(str));
 
 
 
@@ -266,3 +266,27 @@ const S = ["abc", "bca", "dbe"];
 const match = sameIndex(S);
 console.log("12. Positions of the common letter are " + sameIndex(S));
 
+
+//13. Check if a given number is a prime number
+function isPrime(num) {
+    if (num <= 1) {
+        return false;
+    }
+    if (num === 2) {
+        return true;
+    }
+    if (num % 2 === 0) {
+        return false;
+    }
+
+    for (let i = 3; i <= Math.sqrt(num); i += 2) {
+        if (num % i === 0) {
+            return false;
+        }
+    } 
+    return true; 
+}
+
+// Example usage
+const n = 9;
+console.log("13. Given number is prime: " + isPrime(n));
