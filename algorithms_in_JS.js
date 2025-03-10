@@ -225,16 +225,22 @@ console.log("10. The first non repeating character is " + firstNonReapeatingChar
 
 
 //11. Function for username validation
-/* 1. The username is between 4 and 25 characters.
+
+/* 
+1. The username is between 4 and 25 characters.
 2. It must start with a letter.
 3. It can only contain letters, numbers, and the underscore character.
 4. It cannot end with an underscore character.
 If the username is valid then your program should return the string true,
-otherwise return the string false.*/
+otherwise return the string false.
+*/
 function usernameValidation(str){
     const valid_str = /^[A-Za-z]\w+[A-Za-z0-9]$/;
     const valid_length = (str) => str.length >=4 && str.length <=25;
     const valid_username = (valid_str.test(str) && valid_length(str));
     return valid_username;
     }
-    console.log(usernameValidation(readline()));
+
+    // Example usage
+    const str = "Ab23_f";
+    console.log("11. Username is valid " + usernameValidation(str));
