@@ -210,3 +210,15 @@ function kthLargestElement(array, k){
 // Example usage
 const arrk= [3, 1, 4, 1, 5, 9, 2, 6, 5];
 console.log("9. The kth element is " + kthLargestElement(arrk, 2)); // Output: Wed
+
+
+// 10. Find The First Non-Repeating character
+function firstNonReapeatingChar(str) {
+    for (let char of str){
+        if(str.indexOf(char) === str.lastIndexOf(char)) return char;
+    }
+        return null;
+    }
+
+// Example usage
+console.log("10. The first non repeating character is " + firstNonReapeatingChar("aabbcde"));
