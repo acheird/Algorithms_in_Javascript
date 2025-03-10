@@ -171,4 +171,23 @@ console.log("The result of compared neighbors " + compareNeighbors([1, 3, 2, 1, 
 // Output: [1, 2, 3, 4, 5, 6]
 
 
-// new function
+// Function to classifyNumbers depending it's value
+function classifyNumbers(arr){
+    let result = "";
+    for(let i = 0; i < arr.length; i++){
+        if(arr[i] < 0){
+            result += "<";
+        }else if(arr[i] === 0){
+            result += "=";
+        }else{
+            result += ">"
+        }
+    }
+    return result;
+}
+
+// Example usage
+const A = [-1, 0, 2, -3, 5, 0];
+console.log("The result of number classification is " + classifyNumbers(A)); // Output: "<=><>="
+
+//
