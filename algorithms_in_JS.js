@@ -20,7 +20,7 @@ const arr = [3, 1, 4, 1, 5, 9, 2, 6, 5];
 console.log("1. The largest number in the array is: " + findLargestNumber(arr)); // Output: 9
 
 
-// Function to reverse an array
+// 2. Function to reverse an array
 
 function reverseArray(array){
     // Create a new Array to hold the reversed elements
@@ -41,7 +41,7 @@ const arr1 = [1, 2, 3, 4, 5];
 console.log("2. Reversed Array: " + reverseArray(arr1)); // output: [5, 4, 3, 2, 1]
 
 
-// Function to check if a string is a palindrome
+// 3. Function to check if a string is a palindrome
 
 function isPalindrome(string){
     // Reverse original string
@@ -56,7 +56,7 @@ console.log("3. Is the string palindrome " + isPalindrome("level")); // Output: 
 console.log("3. Is the string palindrome " + isPalindrome("hello")); // Output: false
 
 
-// Function to find most frequent element in an array
+// 4. Function to find most frequent element in an array
 
 function mostFrequentElement(array){
     // Create an object to count occurences of each element
@@ -89,7 +89,7 @@ console.log("4. The most frequent element is " + mostFrequentElement([1, 3, 2, 1
 
 
 
-// Function to merge two sorted arrays into a single sorted array
+// 5a. Function to merge two sorted arrays into a single sorted array
 
 function mergeSortedArrays(arr1, arr2){
     // Initialize an empty array to hold the merged result
@@ -132,7 +132,8 @@ console.log("5a. The merged and sorted array is " + mergeSortedArrays([1, 3, 5],
 // Output: [1, 2, 3, 4, 5, 6]
 
 
-// Function to merge two sorted arrays into a single sorted array
+// 5b. Function to merge two sorted arrays into a single sorted array
+
 function mergeSortedArraysb(arr1, arr2){
     // Concatenate two arrays
     const combinedArray = arr1.concat(arr2);
@@ -150,7 +151,7 @@ console.log("5b. The merged and sorted array is " + mergeSortedArraysb([1, 3, 5]
 
 
 
-// Function to compare neighbors in an array
+// 6. Function to compare neighbors in an array
 function compareNeighbors(arr){
     let result = "";
 
@@ -167,11 +168,11 @@ function compareNeighbors(arr){
 }
 
 // Example usage
-console.log("The result of compared neighbors " + compareNeighbors([1, 3, 2, 1, 4, 1, 2, 2, 3])); 
+console.log("6. The result of compared neighbors " + compareNeighbors([1, 3, 2, 1, 4, 1, 2, 2, 3])); 
 // Output: [1, 2, 3, 4, 5, 6]
 
 
-// Function to classifyNumbers depending it's value
+// 7. Function to classifyNumbers depending it's value
 function classifyNumbers(arr){
     let result = "";
     for(let i = 0; i < arr.length; i++){
@@ -188,6 +189,20 @@ function classifyNumbers(arr){
 
 // Example usage
 const A = [-1, 0, 2, -3, 5, 0];
-console.log("The result of number classification is " + classifyNumbers(A)); // Output: "<=><>="
+console.log("7. The result of number classification is " + classifyNumbers(A)); // Output: "<=><>="
 
-//
+// 8. Function to get day after k days
+
+function getDayAfterKDays(startDay, k){
+    const days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+    let index = days.indexOf(startDay);
+
+    for(let i = 0; i < k; i++){
+        index = (index + 1) % 7;
+    }
+
+    return days[index];
+}
+
+// Example usage
+console.log("8. The day we are looking for is " + getDayAfterKDays("Mon", 2)); // Output: Wed
