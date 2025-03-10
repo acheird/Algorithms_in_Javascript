@@ -1,5 +1,4 @@
 // 1.Function to find the largest number in an array
-
 function findLargestNumber(array){
     // Initialize the max variable with the first element of the array
     let max = array[0];
@@ -21,7 +20,6 @@ console.log("1. The largest number in the array is: " + findLargestNumber(arr));
 
 
 // 2. Function to reverse an array
-
 function reverseArray(array){
     // Create a new Array to hold the reversed elements
     let reverseArray = [];
@@ -42,7 +40,6 @@ console.log("2. Reversed Array: " + reverseArray(arr1)); // output: [5, 4, 3, 2,
 
 
 // 3. Function to check if a string is a palindrome
-
 function isPalindrome(string){
     // Reverse original string
     const reversedString = string.split('').reverse().join('');
@@ -57,7 +54,6 @@ console.log("3. Is the string palindrome " + isPalindrome("hello")); // Output: 
 
 
 // 4. Function to find most frequent element in an array
-
 function mostFrequentElement(array){
     // Create an object to count occurences of each element
     const frequencyMap = {};
@@ -88,9 +84,7 @@ function mostFrequentElement(array){
 console.log("4. The most frequent element is " + mostFrequentElement([1, 3, 2, 1, 4, 1, 2, 2, 3]));
 
 
-
 // 5a. Function to merge two sorted arrays into a single sorted array
-
 function mergeSortedArrays(arr1, arr2){
     // Initialize an empty array to hold the merged result
     const mergedArray = [];
@@ -133,7 +127,6 @@ console.log("5a. The merged and sorted array is " + mergeSortedArrays([1, 3, 5],
 
 
 // 5b. Function to merge two sorted arrays into a single sorted array
-
 function mergeSortedArraysb(arr1, arr2){
     // Concatenate two arrays
     const combinedArray = arr1.concat(arr2);
@@ -206,3 +199,14 @@ function getDayAfterKDays(startDay, k){
 
 // Example usage
 console.log("8. The day we are looking for is " + getDayAfterKDays("Mon", 2)); // Output: Wed
+
+
+// 9. Function to to find the Kth largest element
+function kthLargestElement(array, k){
+    const sortedArray = array.slice().sort((a,b) => (b-a));
+    return sortedArray[k-1];
+}
+
+// Example usage
+const arrk= [3, 1, 4, 1, 5, 9, 2, 6, 5];
+console.log("9. The kth element is " + kthLargestElement(arrk, 2)); // Output: Wed
