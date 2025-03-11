@@ -312,3 +312,33 @@ function findIntersection(strArray){
 // Example usage
 console.log("14. Intersection between strings " + findIntersection(["1, 3, 4, 7, 13", "1, 2, 4, 13, 15"])); 
 
+
+//15. Calculate the area between Towers
+function calculateAreaBetweenTowers(heights){
+    let left = 0, right = heights.length - 1;
+    let leftMax = 0, rightMax = 0;
+    let area = 0;
+
+    while (left < right){
+        if (heights[left] < heights[right]){
+            if (heights[left] >= leftMax){
+                leftMax = heights[left];
+             }else{
+                area += leftMax - heights[left];
+        }
+            left++;
+        }else{
+            if (heights[right] >= rightMax){
+                rightMax = heights[right];
+            }else{
+                area += rightMax - heights[right];
+            }
+            right--;
+        }
+    }
+    return area;
+}
+
+
+// Example usage
+console.log("15. The area between towers is " + calculateAreaBetweenTowers([0,1,0,2,1,0,1,3,2,1,2,1]));
