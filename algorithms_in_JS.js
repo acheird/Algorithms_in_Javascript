@@ -155,7 +155,6 @@ function classifyNumbers(arr){
 
 
 // 8. Function to get day after k days
-
 function getDayAfterKDays(startDay, k){
     const days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
     let index = days.indexOf(startDay);
@@ -167,27 +166,21 @@ function getDayAfterKDays(startDay, k){
     return days[index];
 }
 
+
 // 9. Function to to find the Kth largest element
 function kthLargestElement(array, k){
     const sortedArray = array.slice().sort((a,b) => (b-a));
     return sortedArray[k-1];
 }
 
-// Example usage
-const arrk= [3, 1, 4, 1, 5, 9, 2, 6, 5];
-console.log("9. The kth element is " + kthLargestElement(arrk, 2)); // Output: Wed
 
-
-// 10. Find The First Non-Repeating character
+//10. Find The First Non-Repeating character
 function firstNonReapeatingChar(str) {
     for (let char of str){
         if(str.indexOf(char) === str.lastIndexOf(char)) return char;
     }
         return null;
     }
-
-// Example usage
-console.log("10. The first non repeating character is " + firstNonReapeatingChar("aabbcde"));
 
 
 //11. Function for username validation
@@ -207,11 +200,6 @@ function usernameValidation(str){
     return valid_username;
     }
 
-// Example usage
-const str = "Ab23_f";
-console.log("11. Username is valid: " + usernameValidation(str));
-
-
 
 //12. Find strings with letter in the same index
 function sameIndex(array){
@@ -226,11 +214,6 @@ function sameIndex(array){
 }
 return [];
 }
-
-// Example usage
-const S = ["abc", "bca", "dbe"];
-const match = sameIndex(S);
-console.log("12. Positions of the common letter are " + sameIndex(S));
 
 
 //13. Check if a given number is a prime number
@@ -253,10 +236,6 @@ function isPrime(num) {
     return true; 
 }
 
-// Example usage
-const n = 9;
-console.log("13. Given number is prime: " + isPrime(n));
-
 
 //14. Function to find strings' intersection
 function findIntersection(strArray){
@@ -274,9 +253,6 @@ function findIntersection(strArray){
     }
     return result.join(",");
 }
-
-// Example usage
-console.log("14. Intersection between strings " + findIntersection(["1, 3, 4, 7, 13", "1, 2, 4, 13, 15"])); 
 
 
 //15. Calculate the area between Towers
