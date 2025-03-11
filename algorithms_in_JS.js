@@ -14,10 +14,6 @@ function findLargestNumber(array){
     return max;
 }
 
-// Example usage
-const arr = [3, 1, 4, 1, 5, 9, 2, 6, 5];
-console.log("1. The largest number in the array is: " + findLargestNumber(arr)); // Output: 9
-
 
 // 2. Function to reverse an array
 function reverseArray(array){
@@ -34,10 +30,6 @@ function reverseArray(array){
     return reverseArray;
 }
 
-// Example usage
-const arr1 = [1, 2, 3, 4, 5];
-console.log("2. Reversed Array: " + reverseArray(arr1)); // output: [5, 4, 3, 2, 1]
-
 
 // 3. Function to check if a string is a palindrome
 function isPalindrome(string){
@@ -48,9 +40,6 @@ function isPalindrome(string){
     return string === reversedString;
 }
 
-
-console.log("3. Is the string palindrome " + isPalindrome("level")); // Output: true
-console.log("3. Is the string palindrome " + isPalindrome("hello")); // Output: false
 
 
 // 4. Function to find most frequent element in an array
@@ -79,9 +68,6 @@ function mostFrequentElement(array){
     }
     return mostFrequent;
 }
-
-// Example usage
-console.log("4. The most frequent element is " + mostFrequentElement([1, 3, 2, 1, 4, 1, 2, 2, 3]));
 
 
 // 5a. Function to merge two sorted arrays into a single sorted array
@@ -121,10 +107,6 @@ function mergeSortedArrays(arr1, arr2){
     return mergedArray;
 }
 
-// Example usage
-console.log("5a. The merged and sorted array is " + mergeSortedArrays([1, 3, 5], [2, 4, 6])); 
-// Output: [1, 2, 3, 4, 5, 6]
-
 
 // 5b. Function to merge two sorted arrays into a single sorted array
 function mergeSortedArraysb(arr1, arr2){
@@ -137,11 +119,6 @@ function mergeSortedArraysb(arr1, arr2){
     // Return sorted, merged array
     return combinedArray;
 }
-
-// Example usage
-console.log("5b. The merged and sorted array is " + mergeSortedArraysb([1, 3, 5], [2, 4, 6])); 
-// Output: [1, 2, 3, 4, 5, 6]
-
 
 
 // 6. Function to compare neighbors in an array
@@ -160,10 +137,6 @@ function compareNeighbors(arr){
     return result;
 }
 
-// Example usage
-console.log("6. The result of compared neighbors " + compareNeighbors([1, 3, 2, 1, 4, 1, 2, 2, 3])); 
-// Output: [1, 2, 3, 4, 5, 6]
-
 
 // 7. Function to classifyNumbers depending it's value
 function classifyNumbers(arr){
@@ -180,9 +153,6 @@ function classifyNumbers(arr){
     return result;
 }
 
-// Example usage
-const A = [-1, 0, 2, -3, 5, 0];
-console.log("7. The result of number classification is " + classifyNumbers(A)); // Output: "<=><>="
 
 // 8. Function to get day after k days
 
@@ -196,10 +166,6 @@ function getDayAfterKDays(startDay, k){
 
     return days[index];
 }
-
-// Example usage
-console.log("8. The day we are looking for is " + getDayAfterKDays("Mon", 2)); // Output: Wed
-
 
 // 9. Function to to find the Kth largest element
 function kthLargestElement(array, k){
@@ -340,5 +306,22 @@ function calculateAreaBetweenTowers(heights){
 }
 
 
-// Example usage
-console.log("15. The area between towers is " + calculateAreaBetweenTowers([0,1,0,2,1,0,1,3,2,1,2,1]));
+//Export all functions
+module.exports = {
+    findLargestNumber,
+    reverseArray,
+    isPalindrome,
+    mostFrequentElement,
+    mergeSortedArrays,
+    mergeSortedArraysb,
+    compareNeighbors,
+    classifyNumbers,
+    getDayAfterKDays,
+    kthLargestElement,
+    firstNonReapeatingChar,
+    usernameValidation,
+    sameIndex,
+    isPrime,
+    findIntersection,
+    calculateAreaBetweenTowers
+};
