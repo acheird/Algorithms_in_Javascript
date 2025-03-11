@@ -290,3 +290,25 @@ function isPrime(num) {
 // Example usage
 const n = 9;
 console.log("13. Given number is prime: " + isPrime(n));
+
+
+//14. Function to find strings' intersection
+function findIntersection(strArray){
+    let firstArray = strArray[0].split(", ");
+    let secondArray = strArray[1].split(", ");
+    const result = [];
+
+    for(let i=0;i<firstArray.length;i++){
+        for(let j=0;j<secondArray.length;j++){
+            if(firstArray[i] === secondArray[j]){
+                result.push(firstArray[i]);
+                break;
+            }
+        }
+    }
+    return result.join(",");
+}
+
+// Example usage
+console.log("14. Intersection between strings " + findIntersection(["1, 3, 4, 7, 13", "1, 2, 4, 13, 15"])); 
+
